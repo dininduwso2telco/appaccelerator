@@ -1,0 +1,17 @@
+smsgateway: "http://54.193.80.220:8284/smsmessaging/v1/outbound/tel%3A%2B7878/requests"
+smsrequest:
+  outboundSMSMessageRequest:
+    address:
+      - "tel:+60773853001"
+    senderAddress: "tel:+7878"
+    senderName: "SP1"
+    receiptRequest:
+      notifyURL: "http://application.example.com/notifications/DeliveryInfoNotification"
+      callbackData: "some-data-useful-to-the-requester"
+server:
+  applicationConnectors:
+    - type: http
+      port: 7080
+  adminConnectors:
+    - type: http
+      port: 7081
