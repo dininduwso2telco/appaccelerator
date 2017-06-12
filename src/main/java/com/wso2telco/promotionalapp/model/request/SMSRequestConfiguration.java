@@ -1,4 +1,4 @@
-package com.dropwizard.smsgateway.smssender;
+package com.wso2telco.promotionalapp.model.request;
 
 /**
  * Created by dinindu on 5/29/17.

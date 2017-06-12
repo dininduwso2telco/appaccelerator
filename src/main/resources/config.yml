@@ -1,17 +1,17 @@
-smsgateway: "http://54.193.80.220:8284/smsmessaging/v1/outbound/tel%3A%2B7878/requests"
-smsrequest:
-  outboundSMSMessageRequest:
-    address:
-      - "tel:+60773853001"
-    senderAddress: "tel:+7878"
-    senderName: "SP1"
-    receiptRequest:
-      notifyURL: "http://application.example.com/notifications/DeliveryInfoNotification"
-      callbackData: "some-data-useful-to-the-requester"
-server:
-  applicationConnectors:
-    - type: http
-      port: 7080
-  adminConnectors:
-    - type: http
-      port: 7081
+#smsgateway: "http://54.193.80.220:8284/smsmessaging/v1/outbound/tel%3A%2B7878/requests"
+smsgateway: "http://localhost:7090/smsmessaging"
+server: !com.wso2telco.appaccelerator.model.applicationServer.Server
+   rootPath: /c30f3a6e-ffa4-4ae7-afce-224d1f820525/
+   adminConnectors:
+   -  port: 7688
+      type: http
+   applicationConnectors:
+   -  port: 7687
+      type: http
+mongo:
+  host: "localhost"
+  port: 27017
+  db: "mydb"
+  username: "admin"
+  password: "admin"
+appId: c30f3a6e-ffa4-4ae7-afce-224d1f820525
